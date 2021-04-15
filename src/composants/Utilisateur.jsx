@@ -1,6 +1,7 @@
 import './Utilisateur.scss';
 import { Avatar, Button } from '@material-ui/core';
 /* Ex3 - Point C */
+import  { deconnexion } from '../services/crud-utilisateurs';
 
 export default function Utilisateur({utilisateur}) {
   return (
@@ -13,7 +14,7 @@ export default function Utilisateur({utilisateur}) {
         variant="outlined"
         size="small"
         className="btnDeconnexion"
-        onClick={() => alert('A compléter')}
+        onClick={() => deconnexion()}
       >
         Déconnexion
       </Button>
