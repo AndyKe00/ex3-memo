@@ -14,7 +14,7 @@ export async function creer(uid, tache) {
   // date du serveur Firestore.
   tache.date = firebase.firestore.FieldValue.serverTimestamp();
   /* Ex3 - Point E)ii) */
-  instanceFirestore.collection(collUtil).add();
+  return instanceFirestore.collection(collUtil).doc(uid).collection(collTaches).add(tache);
 }
 
 /**
